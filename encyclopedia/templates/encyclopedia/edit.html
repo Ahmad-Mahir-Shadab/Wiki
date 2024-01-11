@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Page
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url }}" method="post">
+        {% csrf_token %}
+        <label for="w3review" style="margin-top: 1%; font-size: 35px; margin-right: 1%;">Content: </label>
+        <br>
+        <textarea id="w3review" name="content" style="height: 500px; width: 800px">{{ datum }}</textarea>
+        <br>
+        <input type="submit" value="Save" style="margin-top: 2%;">
+    </form>
+
+{% endblock %}

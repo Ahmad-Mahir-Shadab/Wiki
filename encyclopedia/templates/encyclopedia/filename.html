@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <md-block>
+        {{ datum }}
+    </md-block>
+
+    <a href="{{url}}/Edit" style="margin-right: 4%;">Edit page</a>
+
+    <a href="/">Back to Home</a>
+
+{% endblock %}
